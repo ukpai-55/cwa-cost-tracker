@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CWA Cost Tracker Dashboard</title>
+</head>
+<body>
+  <h1>CWA Cost Tracker</h1>
+  <ul id="logs"></ul>
+
+  <script>
+    const apiUrl = "https://1mvxkb0zt9.execute-api.us-east-1.amazonaws.com/prod/logs";
+
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+        const ul = document.getElementById("logs");
+        data.forEach(item => {
+          const li = document.createElement("li");
+          li.textContent = `ID: ${item.id}, Timestamp: ${item.timestamp}, Cost: $${item.estimated_cost_usd}`;
+          ul.appendChild(li);
+        });
+      })
+      .catch(err => console.error(err));
+  </script>
+</body>
+</html>
