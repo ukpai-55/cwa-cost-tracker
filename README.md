@@ -68,3 +68,5 @@ Screenshots available in `/screenshots` folder:
 
 ---
 
+## 🔗 Medium Reflection Post
+[My Medium Post](https://medium.com/@ukpainnachi995/building-a-cloud-cost-tracker-alert-system-with-terraform-9d06fa58d6ca)
